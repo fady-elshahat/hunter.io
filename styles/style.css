@@ -1,0 +1,695 @@
+/* Google Font */
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&display=swap');
+/* Global Style */
+
+body {
+     font-family: 'Open Sans', sans-serif;
+     overflow-x: hidden;
+     position: relative;
+}
+
+a {
+     text-decoration: none;
+     color: #555;
+     transition: 0.1s color;
+}
+
+a:hover {
+     color: #191919;
+}
+
+/* NavBar Style */
+
+.navbar {
+     background-color: #9B14AD;
+     border-bottom: 1px solid #e6e6e6;
+     text-align: center;
+     position: fixed;
+     width: 100%;
+     z-index: 1111111111111;
+}
+
+.navbar-toggler {
+     border: none;
+     padding: 0;
+}
+
+.navbar-toggler i {
+     color: #fff;
+     font-size: 30px;
+}
+
+.navbar-toggler:focus {
+     box-shadow: none;
+}
+
+.navbar-nav .nav-item .nav-link {
+     font-size: 17px;
+     color: #fff;
+     transition: color .1s;
+     margin-right: 5px;
+}
+
+.navbar-nav .nav-item .nav-link i {
+     font-size: 14px;
+}
+
+.product-menu, .company-menu, .resources-menu {
+     background-color: #fff;
+     border: 1px solid #d9d9d9;
+     border-radius: 4px;
+     box-shadow: 0 5px 30px -3px rgb(0 0 0 / 30%);
+     margin-left: -10px;
+     opacity: 0;
+     overflow: hidden;
+     position: absolute;
+     top: 65px;
+     transform: scale(.95) translateY(-20px);
+     transition: all .1s ease-in-out 0s, visibility 0s linear .2s, z-index 0s linear .01s;
+     visibility: hidden;
+     width: 400px;
+     z-index: 101;
+     display: flex;
+     flex-direction: column;
+     text-align: left;
+}
+
+.navbar-nav .product:hover .product-menu, .navbar-nav .company:hover .company-menu, .navbar-nav .resources:hover .resources-menu {
+     opacity: 1;
+     transform: scale(1) translateY(0);
+     transition-delay: 0s, 0s, .3s;
+     visibility: visible;
+}
+
+.main-features {
+     padding: 15px;
+}
+
+.product-menu .main-features a {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     color: #555;
+     padding: 10px;
+}
+
+.company-menu .main-features a, .resources-menu .main-features a {
+     display: block;
+     padding: 10px;
+}
+
+.product-menu .main-features a i {
+     color: #9B14AD;
+     font-size: 24px;
+}
+
+.product-menu .main-features a strong {
+     color: #191919;
+     font-size: 15px;
+     font-weight: 600;
+}
+
+.product-menu .additional-features {
+     background-color: #fafbfb;
+     border-top: 1px solid #e6e6e6;
+     padding: 10px;
+}
+
+.product-menu .additional-features a {
+     display: block;
+     padding: 8px 10px;
+}
+
+.product-menu .api-link {
+     background-color: #fafbfb;
+     padding: 10px 20px;
+}
+
+.autha {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+}
+
+.autha .sign-in, .autha .sign-up {
+     outline: none;
+     border: none;
+     padding: 10px 18px;
+     cursor: pointer;
+     margin-right: 10px;
+}
+
+.autha .sign-in {
+     background-color: #fff;
+     border-radius: 5px;
+}
+
+.autha .sign-up {
+     background-color: #9B14AD;
+     border-radius: 5px;
+}
+
+.autha .sign-up a {
+     font-size: 17px;
+     color: #fff;
+     font-weight: 500;
+     transition: .1s;
+     text-decoration: none;
+}
+
+.autha .sign-up:hover {
+     background-color: #ab13bf;
+}
+
+.autha .sign-in a {
+     font-size: 17px;
+     font-weight: 500;
+     color: #9B14AD;
+     transition: color .1s;
+     text-decoration: none;
+}
+
+.autha .sign-in:focus, .autha .sign-up:focus {
+     border: none;
+     outline: none;
+}
+
+.autha .btn-sign-in:hover {
+     color: #191919;
+}
+
+.nav-layout {
+     background-color: #fff;
+     border-radius: 4px;
+     box-shadow: 0 0 5px rgb(0 0 0 / 10%), 0 3px 15px rgb(0 0 0 / 30%);
+     display: none;
+     left: 15px;
+     margin: 0;
+     padding: 0;
+     position: absolute;
+     right: 15px;
+     top: 15px;
+     z-index: 1003;
+     text-align: left;
+}
+
+.nav-layout .icon-close {
+     position: absolute;
+     right: 20px;
+     top: 15px;
+}
+
+.nav-layout .icon-close i {
+     color: #9B14AD;
+     cursor: pointer;
+     font-size: 30px;
+}
+
+.nav-layout .titel-layout {
+     color: #a2a2a2;
+     font-size: 16px;
+     margin: 15px 0 10px 20px;
+     text-transform: uppercase;
+}
+
+.nav-layout .list-nav-layout {
+     list-style: none;
+     margin-top: 0;
+     padding-left: 0;
+}
+
+.nav-layout .list-nav-layout .item-layout a {
+     border-radius: 4px;
+     color: #4c4c4c;
+     display: inline-block;
+     font-size: 19px;
+     padding: 17px 24px;
+     width: 100%;
+     transition: color .1s;
+     text-decoration: none;
+}
+
+.nav-layout .list-nav-layout .item-layout:last-child a {
+     background-color: #f7f9f9;
+}
+
+.nav-layout .list-nav-layout .item-layout a:hover {
+     color: #191919;
+}
+
+/* Strat Find Email  Section*/
+
+.find-email {
+     background-color: #FAFBFB;
+     border-bottom: 2px solid #e1e1e1;
+}
+
+.find-email .content-sec h1 {
+     font-size: 40px;
+     font-weight: 500;
+     margin: 50px 0 40px
+}
+
+.find-email .content-sec p {
+     color: #737373;
+     font-size: 19px;
+     font-weight: 400;
+     letter-spacing: 0;
+     line-height: 32px;
+     margin: 15px auto 0;
+     text-align: center;
+     margin-bottom: 20px;
+}
+
+.find-email .form {
+     background-color: #fff;
+     border-radius: 3px;
+     box-shadow: 0 6px 30px rgb(0 0 0 / 25%);
+     padding: 40px;
+     position: relative;
+}
+
+.find-email .form .input-control {
+     background: #fff;
+     border-right: 0;
+     border: 1px solid #D9AAE0;
+     font-size: 16px;
+     height: 52px;
+     outline: none;
+     width: 100%;
+     padding: 0 10px;
+}
+
+.find-email .form .des {
+     font-size: 17px;
+     margin-top: 15px;
+     color: #737373;
+}
+
+.find-email .form .input-control::placeholder {
+     padding: 0 5px;
+     font-family: inherit;
+     font-weight: 500;
+}
+
+.find-email .form .submit-btn {
+     background-color: #9B14AD;
+     color: #fff;
+     outline: 0;
+     border: 0;
+     position: absolute;
+     right: 40px;
+     padding: 14px;
+     transition: .1s;
+}
+
+.find-email .form .submit-btn .sm {
+     display: none;
+}
+
+.find-email .form .submit-btn:hover {
+     background-color: #ab13bf;
+}
+
+.find-email .customers-logos {
+     padding: 50px;
+     margin-top: 50px;
+}
+
+.find-email .customers-logos img {
+     opacity: 0.5;
+}
+
+.find-email .customers-logos h3 {
+     color: #737373;
+     font-size: 18px;
+     font-weight: 500;
+     margin: 30px 10px 50px 10px;
+     text-align: center;
+}
+
+/* Strat Find DOMAIN SEARCH*/
+
+.domain-search {
+     border-bottom: 2px solid #e6e6e6;
+     padding-bottom: 20px;
+}
+
+.domain-search .content .titel-domain, .titel-email {
+     color: #888;
+     font-size: 14px;
+     font-weight: 700;
+     margin-bottom: 12 px;
+     text-transform: uppercase;
+}
+
+.domain-search .content .des {
+     color: #191919;
+     display: inline-block;
+     font-size: 19px;
+     font-weight: 600;
+     margin: 0 0 12px;
+}
+
+.domain-search .content .des2 {
+     font-size: 16px;
+     line-height: 26px;
+}
+
+.domain-search .content a {
+     font-size: 16px;
+     padding-top: 20px;
+     color: #CE52DD;
+}
+
+.domain-search .content a::after {
+     content: "›";
+     margin-left: 0.3em;
+}
+
+.domain-search .row img {
+     border: solid #dedede;
+     border-radius: 5 px 5 px 0 0;
+     border-width: 1 px 1 px 0;
+     box-shadow: 0 3px 10px 0 rgb(0 0 0 / 15%);
+     margin: 0;
+}
+
+.domain-search .row .item-domain-search {
+     text-align: left;
+     cursor: pointer;
+     border-bottom: 1px solid #e6e6e6;
+     margin-left: 15px;
+     opacity: .5;
+     padding: 13px 20px;
+     transition: all .1s linear;
+}
+
+.domain-search .row .item-domain-search:last-child {
+     border: none;
+}
+
+.domain-search .row .item-domain-search .titel {
+     color: #191919;
+     display: inline-block;
+     font-size: 17px;
+     margin-bottom: 10px;
+     font-weight: 800;
+}
+
+.domain-search .row .item-domain-search:hover {
+     opacity: 1;
+}
+
+/* Strat Find EMAIL FINDER*/
+
+.email-finder .row .des {
+     color: #191919;
+     display: inline-block;
+     font-size: 19px;
+     font-weight: 600;
+     margin: 0 0 12px;
+}
+
+.email-finder .row .des2 {
+     font-size: 16px;
+     line-height: 26px;
+}
+
+.email-finder .row .link {
+     font-size: 16px;
+     padding-top: 20px;
+     color: #CE52DD;
+}
+
+.email-finder .row .link::after {
+     content: "›";
+     margin-left: 0.3em;
+}
+
+.email-finder .row .reviews-rating {
+     color: #191919;
+     font-size: 22px;
+     font-weight: 600;
+     margin-top: 15px;
+}
+
+.email-finder .row .reviews-rating>span {
+     font-size: 14px;
+     color: #737373;
+}
+
+.email-finder .img-capterra {
+     width: 60%;
+}
+
+/* Strat Find Transparency */
+
+.transparency {
+     background: url(https://hunter.io/packs/media/images/51bc4fd355e3af6cf68f.jpg) no-repeat center 60px;
+     background-size: 800px;
+     padding: 100px 0 140px;
+     background-position: center;
+     text-align: center;
+}
+
+.transparency .row h2 {
+     font-size: 40px;
+     color: #191919;
+     font-weight: 500;
+     margin: 0 0 30px;
+     text-align: center;
+}
+
+.transparency .row .des {
+     margin: 0 auto 40px;
+     color: #555;
+     max-width: 700px;
+     font-size: 22px;
+     line-height: 38px;
+}
+
+.transparency .row .btn-transparency {
+     font-size: 16px;
+     height: 54px;
+     padding: 14px 25px;
+     cursor: pointer;
+     background-color: #9B14AD;
+     color: #fff;
+     border-radius: 5px;
+     font-weight: 500;
+     transition: all .1s;
+}
+
+.transparency .row .btn-transparency:hover {
+     background-color: #ab13bf;
+}
+
+/* Start Footer */
+
+#footer {
+     background-color: #222;
+     color: #aeaeae;
+     font-size: 15px;
+     padding: 120px 15px 40px;
+}
+
+#footer .row .titel-list {
+     color: #fff;
+     font-size: 17px;
+     font-weight: 600;
+     letter-spacing: 1.5px;
+     margin: 13px 0 19px;
+     text-transform: uppercase;
+}
+
+#footer .row .list-footer, #footer .row .icon-social {
+     list-style: none;
+     margin: 0;
+     padding: 0;
+}
+
+#footer .row .list-footer li {
+     margin: 20px 0;
+}
+
+#footer .row li a {
+     color: #c8c8c8;
+     font-size: 17px;
+     transition: all .1s ease-in-out;
+}
+
+#footer .row li a:hover {
+     color: #fff;
+}
+
+#footer .row .icon-social {
+     display: flex;
+     justify-content: center;
+     border-bottom: 1px solid #c8c8c8;
+}
+
+#footer .row .icon-social li {
+     margin: 20px 10px;
+}
+
+#footer .row .icon-social li a {
+     font-size: 24px;
+}
+
+#footer .row p {
+     color: #737373;
+     font-size: 12px;
+     margin-top: 30px;
+     text-align: center;
+}
+
+#footer .row .col-md-9 ul {
+     display: flex;
+     justify-content: center;
+     list-style: none;
+     margin: 0;
+     padding: 0;
+}
+
+#footer .row .col-md-9 ul li {
+     margin: 10px;
+}
+
+/* Pricing Page */
+
+#pricing .pricing-content .pricing-titel {
+     font-size: 45px;
+     font-weight: 500;
+}
+
+#pricing .pricing-content .pricing-p {
+     color: #737373;
+     font-size: 19px;
+     font-weight: 400;
+     letter-spacing: 0;
+     line-height: 32px;
+}
+
+#pricing .pricing-item {
+     box-shadow: 0 6px 30px rgb(0 0 0 / 15%);
+     background-color: #fff;
+     padding: 25px 10px;
+     margin: 10px;
+     border-radius: 5px;
+}
+
+#pricing .pricing-item .item-titel {
+     font-weight: 800;
+     font-size: 30px;
+     margin-bottom: 20px;
+}
+
+#pricing .pricing-item p {
+     color: #4c4c4c;
+     margin-bottom: 10px;
+}
+
+#pricing .pricing-item span {
+     display: block;
+     margin-bottom: 13px;
+}
+
+#pricing .pricing-item span strong {
+     font-size: 20px;
+}
+
+#pricing .pricing-item .btn-pricing {
+     background-color: #9b14ad;
+     padding: 10px 15px;
+     cursor: pointer;
+}
+
+#pricing .pricing-item .btn-pricing a {
+     color: #fff;
+}
+
+#pricing .payment h2 {
+     font-size: 25px;
+     margin-bottom: 15px;
+}
+
+#pricing .payment i{
+     font-size: 35px;
+     margin-right: 10px;
+     color: #737373;
+}
+/* Media Query */
+
+@media only screen and (max-width: 768px) {
+     .navbar {
+          position: static;
+     }
+     .navbar .container {
+          padding: 0px 15px;
+     }
+     #navbarNav {
+          display: none;
+     }
+     .autha {
+          display: none;
+     }
+     .find-email .content-sec h1 {
+          font-size: 30px;
+     }
+     .find-email .form .submit-btn .lg {
+          display: none;
+     }
+     .find-email .form .submit-btn .sm {
+          display: block;
+     }
+     .product-menu {
+          display: none;
+     }
+     .find-email .container {
+          padding: 0;
+     }
+     .find-email .form {
+          padding: 40px 20px;
+     }
+     .transparency .row h2 {
+          font-size: 30px;
+     }
+     .col-md-2 {
+          width: 50%;
+          margin-bottom: 25px;
+          text-align: center;
+     }
+     .col-md-2 img {
+          width: 50%;
+     }
+     .email-finder .col-md-5 {
+          margin-bottom: 60px;
+     }
+     .img-domain {
+          display: none;
+     }
+     .find-email .form .submit-btn {
+          right: 19px;
+     }
+     #footer .row {
+          text-align: center;
+     }
+     #footer .row .col-md-3 {
+          margin-bottom: 20px;
+     }
+     .email-finder .row .col-md-3 {
+          margin-bottom: 30px;
+          text-align: center;
+     }
+     .email-finder .img-capterra {
+          width: 30%;
+     }
+     #footer .row li a {
+          font-size: 14px;
+     }
+     #footer .row .col-md-9 ul li {
+          margin: 5px;
+     }
+}
